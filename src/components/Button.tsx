@@ -10,6 +10,11 @@ export interface ButtonProps {
    * What background color to use
    */
   backgroundColor?: string;
+
+  /**
+   * What margin to use
+   */
+  margin: string;
   /**
    * How large should the button be?
    */
@@ -30,6 +35,7 @@ export interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
+  margin = "10px",
   backgroundColor,
   label,
   ...props
@@ -39,7 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      style={{ backgroundColor, margin }}
       {...props}
     >
       {label}

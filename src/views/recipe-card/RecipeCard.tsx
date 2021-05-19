@@ -1,7 +1,9 @@
 import React from 'react';
-import './card.css';
+import { Button } from '../../components/Button';
+import './RecipeCard.css';
 
-export interface CardProps {
+export interface RecipeCardProps {
+    id: string;
     /**
      * Is this the principal call to action on the page?
      */
@@ -14,16 +16,13 @@ export interface CardProps {
      * How large should the button be?
      */
     viewButtonLabel: string;
-    /**
-     * Optional click handler
-     */
-    onClick?: () => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Card: React.FC<CardProps> = ({
+export const RecipeCard: React.FC<RecipeCardProps> = ({
+    id,
     title,
     subtitle,
     viewButtonLabel,
@@ -31,12 +30,16 @@ export const Card: React.FC<CardProps> = ({
 }) => {
     return (
         <div className="card">
-            <div className="container">
+            <div className="cardMeta">
                 <h4><b> {title}</b></h4>
                 <p>{subtitle}</p>
             </div>
             <div className="btn-container">
-                <button className="btn" >{viewButtonLabel} </button>
+                <Button
+                    margin="10px"
+                    size="small" primary
+                    label={viewButtonLabel}
+                    onClick={() => window.location.href = "/recipes/" + id.toString()} />
             </div>
         </div>
     );

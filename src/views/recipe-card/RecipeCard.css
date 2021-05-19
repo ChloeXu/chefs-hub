@@ -1,7 +1,9 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 40%;
+  /* width: 40%; */
+  border-radius: 1rem;
+  margin: 10px;
 }
 
 .card:hover {
@@ -13,9 +15,13 @@
 }
 
 .btn-container {
-	display:flex; justify-content:flex-end; width:100%; padding:0;
+	display:flex; 
+  justify-content:flex-end; 
+  width:100%; 
+  padding:0;
 }
 
-.btn {
-	margin: 10px;
+.cardMeta {
+  padding-top: 10px;
+  padding-left: 20px;
 }

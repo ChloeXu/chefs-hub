@@ -6,6 +6,7 @@ import "./index.css";
 import { App } from "./views/app/App";
 import reportWebVitals from "./reportWebVitals";
 import { Recipes } from "./views/recipes/Recipes";
+import { RecipeDetail } from "./views/recipe-detail/RecipeDetail";
 
 const Routing = () => {
   return (
@@ -14,6 +15,7 @@ const Routing = () => {
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/recipes" component={Recipes} />
+        <Route exact path="/recipes/:id" component={RecipeDetail} />
       </Switch>
     </Router>
   )

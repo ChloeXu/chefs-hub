@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import './header.css';
 
 export interface HeaderProps {
@@ -11,10 +9,7 @@ export const Header: React.FC<HeaderProps> = () => (
   <header>
     <div className="wrapper">
       <div>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/recipes">Recipes</Link></li>
-        </ul>
+        <h1 className="site-title">Chefs Hub</h1>
       </div>
     </div>
   </header>
