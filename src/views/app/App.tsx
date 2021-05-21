@@ -1,12 +1,14 @@
 import "./App.css";
+import Container from 'react-bootstrap/Container';
+import { Recipes } from "../recipes/Recipes";
+
 
 export const App = () => {
   return (
-    <div className="App">
-      <p>
-        Welcome to Chef's hub
-        </p>
-    </div>
+    <Container className="p-3">
+      <h2 className="header pb-10">Welcome To Chefs Hub</h2>
+      <Recipes />
+    </Container>
   );
 }
 

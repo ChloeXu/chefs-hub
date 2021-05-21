@@ -1,22 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Header } from './components/Header'
 import "./index.css";
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { App } from "./views/app/App";
 import reportWebVitals from "./reportWebVitals";
-import { Recipes } from "./views/recipes/Recipes";
 import { RecipeDetail } from "./views/recipe-detail/RecipeDetail";
+import Container from "react-bootstrap/esm/Container";
 
 const Routing = () => {
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/recipes" component={Recipes} />
-        <Route exact path="/recipes/:id" component={RecipeDetail} />
-      </Switch>
+      <Container>
+        <Switch>
+          <Route exact path="/" component={App} />
+          <Route exact path="/recipes/:id" component={RecipeDetail} />
+        </Switch>
+      </Container>
     </Router>
   )
 }
