@@ -1,4 +1,5 @@
 import React from 'react';
+import { Badge } from 'react-bootstrap';
 import { Button } from '../../components/Button';
 import './RecipeCard.css';
 
@@ -32,7 +33,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
         <div className="card">
             <div className="cardMeta">
                 <h4><b> {title}</b></h4>
-                <p>{subtitle}</p>
+                <Badge pill variant="info">{subtitle}</Badge>
             </div>
             <div className="btn-container">
                 <Button
