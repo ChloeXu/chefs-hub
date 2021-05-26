@@ -19,6 +19,14 @@ code {
 .p-20 {
   padding: 20px;
 }
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
 
 .pt-20 {
   padding-top: 20px;

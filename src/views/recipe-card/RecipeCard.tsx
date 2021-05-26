@@ -33,12 +33,11 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
         <div className="card">
             <div className="cardMeta">
                 <h4><b> {title}</b></h4>
-                <Badge pill variant="info">{subtitle}</Badge>
+                <Badge pill variant="primary">{subtitle}</Badge>
             </div>
             <div className="btn-container">
                 <Button
                     margin="10px"
-                    size="small" primary
                     label={viewButtonLabel}
                     onClick={() => window.location.href = "/recipes/" + id.toString()} />
             </div>

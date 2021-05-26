@@ -8,7 +8,7 @@ import { Col, Row } from "react-bootstrap";
 
 export const App = () => {
   return (
-    <Container className="pt-20">
+    <Container >
       <h2 className="header">Welcome To Chefs Hub</h2>
       <Row>
         <Col></Col>
@@ -18,7 +18,7 @@ export const App = () => {
             size="medium" primary
             label="New"
             backgroundColor="#4bb357"
-            onClick={() => console.log("clicked")} />
+            onClick={() => window.location.href = "/new"} />
         </Col>
         <Col></Col>
       </Row>

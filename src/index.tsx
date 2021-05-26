@@ -8,13 +8,15 @@ import { App } from "./views/app/App";
 import reportWebVitals from "./reportWebVitals";
 import { RecipeDetail } from "./views/recipe-detail/RecipeDetail";
 import Container from "react-bootstrap/esm/Container";
+import { NewRecipe } from "./views/new-recipe/NewRecipe";
 
 const Routing = () => {
   return (
     <Router>
-      <Container>
+      <Container className="pt-20">
         <Switch>
           <Route exact path="/" component={App} />
+          <Route exact path="/new" component={NewRecipe} />
           <Route exact path="/recipes/:id" component={RecipeDetail} />
         </Switch>
       </Container>

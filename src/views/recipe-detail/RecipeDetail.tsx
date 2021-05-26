@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import { useParams } from 'react-router-dom'
 import { Button } from '../../components/Button';
 import { recipes_mock } from '../../data/sample.data';
-import { Badge, Col, Row, ListGroup } from "react-bootstrap";
+import { Col, Row, ListGroup } from "react-bootstrap";
 
 export interface RecipeDetailProps {
 }
@@ -13,25 +13,17 @@ export const RecipeDetail: React.FC<RecipeDetailProps> = ({ ...props }) => {
     const data = recipes_mock.find((r) => r.id.toString() === id);
     return (
         <Container >
-            <Row>
+            <h2 className="header">{data?.name}</h2>
+            <Row className="pl-20 pr-20 pb-20">
                 <Col></Col>
                 <Col xs={8}>
                     <Row className="top-bar-control">
-                        <Button label="Back" margin="0px" onClick={() => window.location.href = "/"} />
+                        <Button label="Back" margin="0 15px 0 15px" onClick={() => window.location.href = "/"} />
                     </Row>
                 </Col>
                 <Col></Col>
             </Row>
-            <Row className="pt-20">
-                <Col></Col>
-                <Col xs={8}>
-                    <h2 >{data?.name}</h2>
-                    <Badge pill variant="info">{data?.cuisine}</Badge>
-                </Col>
-                <Col>
-                </Col>
-            </Row>
-            <Row className="pt-20">
+            <Row className="p-20">
                 <Col></Col>
                 <Col xs={8}>
                     <div>

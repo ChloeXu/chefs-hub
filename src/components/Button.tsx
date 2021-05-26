@@ -33,10 +33,10 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-  primary = false,
+  primary = true,
   size = 'medium',
-  margin = "10px",
-  backgroundColor,
+  margin = "0px",
+  backgroundColor = "cornflowerblue",
   label,
   ...props
 }) => {
