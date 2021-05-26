@@ -15,7 +15,7 @@ export const App = () => {
         <Col xs={8}>
           <Button
             margin="20px"
-            size="large" primary
+            size="medium" primary
             label="New"
             backgroundColor="#4bb357"
             onClick={() => console.log("clicked")} />
